@@ -14,12 +14,18 @@
 // mod loops;
 // mod lifetimes;
 // mod enums;
-mod traits;
+// mod c_modules;
+// mod lifetimes;
+// mod ownership_ref;
+// mod run_c;
+// mod traits;
 
 // import only a single func from a mod
 // use crate::structs::run;
 
 // use num_bigint::BigUint;
+
+mod cpp;
 
 fn main() {
     // variables::run();
@@ -36,8 +42,19 @@ fn main() {
     // lifetimes::run();
 
     // ownership::run();
-    traits::run();
+    // traits::run();
+
     // macros::run();
+
+    // run_c::main();
+
+    let a = 10;
+    let b = 5;
+    let res = cpp::cpp::add(a, b);
+
+    println!("Result = {res}");
+
+    // ownership_ref::main();
 
     // let x: BigUint = "10".parse().unwrap();
     // println!("This is the value of x: {:#?}", x);
